@@ -1,10 +1,9 @@
-public class ThermostatIncreaseCommand implements Command {
+public class IncreaseTemperatureCommand implements Command {
     private Thermostat thermostat;
 
-    public ThermostatIncreaseCommand(Thermostat thermostat) {
+    public IncreaseTemperatureCommand (Thermostat thermostat) {
         this.thermostat = thermostat;
     }
-
     @Override
     public void execute() {
         thermostat.increaseTemperature();
