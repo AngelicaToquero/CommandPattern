@@ -1,4 +1,4 @@
-public class MusicPlayer implements Device {
+public class MusicPlayer implements VolumeAdjustable, Device {
     @Override
     public void turnOn() {
         System.out.println("Music Player is now On");
@@ -10,11 +10,16 @@ public class MusicPlayer implements Device {
     }
 
     @Override
+    public void increaseVolume() {
+        System.out.println("Increasing the volume.");
+    }
+
+    @Override
     public void decreaseVolume() {
         System.out.println("Decreasing the volume.");
     }
 
     public void playPlaylist() {
-        System.out.println("Playing favorite playlist.")
+        System.out.println("Playing favorite playlist.");
     }
 }
